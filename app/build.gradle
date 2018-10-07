@@ -33,13 +33,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    //OkGo网络框架
-    implementation 'com.lzy.net:okgo:3.0.4'
-    //以下两者选择添加
-    implementation 'com.lzy.net:okrx2:2.0.2'
+    implementation 'com.lzy.net:okgo:3.0.4'  //OkGo网络框架
+    implementation 'com.lzy.net:okrx2:2.0.2'//以下两者选择添加
     implementation 'com.lzy.net:okserver:2.0.5'
-    //圆形图片
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
-    //EventBus
-    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0' //圆形图片
+    implementation 'org.greenrobot:eventbus:3.1.1'  //EventBus
 }
