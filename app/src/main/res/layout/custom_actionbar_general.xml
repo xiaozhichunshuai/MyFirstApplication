@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_default_blue">
+
+    <TextView
+        android:id="@+id/ab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/writeOffSystem"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:id="@+id/customer_actionBar_general_roundImageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_toStartOf="@+id/ab_title"
+        android:contentDescription="@string/back"
+        android:src="@drawable/lightning"/>
+
+    <RelativeLayout
+        android:id="@+id/action_next_images_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/action_next_images1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/complete"
+            android:padding="4dp"
+            android:src="@drawable/ic_schedule_ab_add"
+            />
+
+        <ImageView
+            android:id="@+id/action_next_images2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/action_next_images1"
+            android:layout_alignTop="@id/action_next_images1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/action_next_images1"
+            android:contentDescription="@string/setUp"
+            android:padding="4dp"
+            android:src="@drawable/setting"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_next_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        >
+
+        <TextView
+            android:id="@+id/action_next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingEnd="0dp"
+            android:paddingStart="5dp"
+            android:text="@string/complete"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/action_next_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/action_next_text"
+            android:layout_alignTop="@id/action_next_text"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/action_next_text"
+            android:contentDescription="@string/complete"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/ab_flag_right"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_back_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:paddingEnd="0dp"
+        android:paddingStart="2dp"
+        >
+
+        <ImageView
+            android:id="@+id/action_back_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/action_back_text"
+            android:layout_alignTop="@+id/action_back_text"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/ab_flag_left"
+            />
+
+        <TextView
+            android:id="@+id/action_back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/action_back_flag"
+            android:text="@string/back"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/action_setting"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/ic_schedule_delete"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/action_sharing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/black_alert_cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fill"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+</RelativeLayout>

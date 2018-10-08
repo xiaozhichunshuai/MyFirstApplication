@@ -1,6 +1,6 @@
 package sxz.drhj.com.myfirstapplication.presenter;
 
-import sxz.drhj.com.myfirstapplication.Base.BasePresenter;
+import sxz.drhj.com.myfirstapplication.BaseManager.BasePresenter;
 import sxz.drhj.com.myfirstapplication.interfaces.ArticleListView;
 
 /**
@@ -8,7 +8,7 @@ import sxz.drhj.com.myfirstapplication.interfaces.ArticleListView;
  * 第一次，先从数据库加载缓存，然后再从网络上加载最新数据。
  */
 public class ArticleListPresenter extends BasePresenter<ArticleListView> {
-    public static final int FIRST_PAGE = 1;  //第一页数据,代表最新数据
+    private static final int FIRST_PAGE = 1;  //第一页数据,代表最新数据
     private int mPageIndex = FIRST_PAGE;  //索引，用于下拉下一页数据
     private boolean isCacheLoaded = false;
 

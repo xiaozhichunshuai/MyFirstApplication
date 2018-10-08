@@ -3,4 +3,32 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#ebebeb</color>
+    <color name="gray_title">#9A9A9A</color>
+    <color name="light_blue">#6593cb</color>
+    <color name="salary_status_red">#ff6941</color>
+    <color name="salary_status_gray">#999999</color>
+    <color name="salary_status_green">#3cc2a9</color>
+    <color name="salary_gray">#b2b2b2</color>
+    <color name="transparent">#00000000</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="gridview_line">#E5E5E5</color>
+    <color name="schedule_gridview_bg">#F1F1F1</color>
+    <color name="app_default_blue">#338DC1</color>
+    <color name="list_item_bg_normal">@color/white</color>
+    <color name="list_item_bg_checked">@color/gray</color>
+    <color name="list_item_bg_pressed">@color/gray</color>
+    <color name="normal_text_color">#333333</color>
+    <color name="notice_yellow_bg">#F5EEC0</color>
+    <color name="notice_yellow_text">#93671A</color>
+    <color name="package_info_red">#DA2F2F</color>
+    <color name="half_black">#66000000</color>
+
+    <color name="red">#f5c662</color>
+    <color name="blue">#96cff7</color>
+    <drawable name="completedTaskBackground">#CCCCCC</drawable>
+    <drawable name="touchFeedback">#CFD8DC</drawable>
+
 </resources>

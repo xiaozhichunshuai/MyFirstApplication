@@ -1,4 +1,4 @@
-package sxz.drhj.com.myfirstapplication.Base;
+package sxz.drhj.com.myfirstapplication.BaseManager;
 
 import sxz.drhj.com.myfirstapplication.interfaces.MvpView;
 
