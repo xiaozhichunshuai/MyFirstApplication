@@ -44,13 +44,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initToolBar()
         message.text = "爷爷"
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-    }
-
-    private fun initToolBar() {
-
     }
 
     //ActionBar点击返回
