@@ -9,7 +9,6 @@ import com.lzy.okgo.callback.StringCallback
 import com.lzy.okgo.model.Response
 import com.lzy.okgo.request.base.Request
 import kotlinx.android.synthetic.main.activity_main.*
-import sxz.drhj.com.myfirstapplication.BaseManager.BaseActivity
 import sxz.drhj.com.myfirstapplication.R
 import sxz.drhj.com.myfirstapplication.utils.DialogUtils
 import sxz.drhj.com.myfirstapplication.utils.MyLog
@@ -19,7 +18,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 
-class MainActivity : BaseActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mContext: MainActivity = this
 
     private val mOnNavigationItemSelectedListener =
@@ -45,20 +44,13 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initActionBar()
+        initToolBar()
         message.text = "爷爷"
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-
     }
 
+    private fun initToolBar() {
 
-    private fun initActionBar() {
-        if (mActionBarTitle != null &&
-                mActionBackLayout != null && mActionNextLayout != null) {
-            mActionBarTitle.text = "燥起来"
-            mActionNextLayout.visibility = View.GONE
-            mActionBackLayout.setOnClickListener(mContext)
-        }
     }
 
     //ActionBar点击返回
