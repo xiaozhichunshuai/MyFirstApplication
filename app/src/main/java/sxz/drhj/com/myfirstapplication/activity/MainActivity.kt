@@ -3,11 +3,13 @@ package sxz.drhj.com.myfirstapplication.activity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.callback.StringCallback
 import com.lzy.okgo.model.Response
 import com.lzy.okgo.request.base.Request
 import kotlinx.android.synthetic.main.activity_main.*
+import sxz.drhj.com.myfirstapplication.BaseManager.BaseActivity
 import sxz.drhj.com.myfirstapplication.R
 import sxz.drhj.com.myfirstapplication.utils.DialogUtils
 import sxz.drhj.com.myfirstapplication.utils.MyLog
@@ -17,9 +19,8 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 
-class MainActivity : AppCompatActivity() {
-
-    private val mContext: MainActivity = this
+class MainActivity : BaseActivity(), View.OnClickListener {
+    private var mContext: MainActivity = this
 
     private val mOnNavigationItemSelectedListener =
             BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -44,9 +45,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initActionBar()
         message.text = "爷爷"
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+    }
+
+
+    private fun initActionBar() {
+        if (mActionBarTitle != null &&
+                mActionBackLayout != null && mActionNextLayout != null) {
+            mActionBarTitle.text = "燥起来"
+            mActionNextLayout.visibility = View.GONE
+            mActionBackLayout.setOnClickListener(mContext)
+        }
+    }
+
+    //ActionBar点击返回
+    override fun onClick(v: View?) {
+        MyToast.makeText(mContext, "回去")
     }
 
     @Override
@@ -102,7 +119,7 @@ class MainActivity : AppCompatActivity() {
         mUriCon.connect()
 
         val outputStream = mUriCon.outputStream
-        val objOutPutStream:ObjectOutputStream = ObjectOutputStream(outputStream)
+        val objOutPutStream: ObjectOutputStream = ObjectOutputStream(outputStream)
         objOutPutStream.writeObject("test data")
         objOutPutStream.flush()
         objOutPutStream.close()
