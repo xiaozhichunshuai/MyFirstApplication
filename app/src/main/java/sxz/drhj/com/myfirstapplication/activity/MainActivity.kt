@@ -44,19 +44,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        message.text = "爷爷"
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-    }
-
-    //ActionBar点击返回
-    override fun onClick(v: View?) {
-        MyToast.makeText(mContext, "回去")
     }
 
     @Override
     override fun onStart() {
         super.onStart()
         getDataFromNetWork("https://blog.csdn.net/bskfnvjtlyzmv867/article/details/71598263");
+    }
+
+    //ActionBar点击返回
+    override fun onClick(v: View?) {
+        MyToast.makeText(mContext, "回去")
     }
 
     //获取数据
